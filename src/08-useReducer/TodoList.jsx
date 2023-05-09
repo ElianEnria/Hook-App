@@ -3,8 +3,6 @@ import { TodoItem } from "./TodoItem"
 export const TodoList = ({ todos = [], onDeleteTodo, onToggleTodo }) => {
 
 
-
-
     return (
         <>
             <ul className="list-group">
