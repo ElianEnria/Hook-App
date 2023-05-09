@@ -1,31 +1,33 @@
-const initialState = [{
+const initialState = [
+  {
     id: 1,
-    todo: 'Recolectar la piedra del Alma',
+    todo: "Recolectar la piedra del Alma",
     done: false,
-}]
+  },
+];
 
 // reducer
-const todoReducer = (state = initialState, action={}) => {
-    if ( action.type === '[TODO] add todo') {
-        return [...state, action.payload]//agregar lo que viene en el payload
-    }
+const todoReducer = (state = initialState, action = {}) => {
+  if (action.type === "[TODO] add todo") {
+    return [...state, action.payload]; //agregar lo que viene en el payload
+  }
 
-    return state; //siempre tiene que regresar un estado
-}
+  return state; //siempre tiene que regresar un estado
+};
 
-let todos = todoReducer()
+let todos = todoReducer();
 
 const newTodo = {
-    id:2,
-    todo: 'Recolectar la piedra del poder',
-    done: false,
-}
+  id: 2,
+  todo: "Recolectar la piedra del poder",
+  done: false,
+};
 
 const addTodoAction = {
-    type: '[TODO] add todo',
-    payload: newTodo,
-}
+  type: "[TODO] add todo",
+  payload: newTodo,
+};
 
-todos = todoReducer(todos, addTodoAction)
+todos = todoReducer(todos, addTodoAction);
 
-console.log(todos)
+console.log(todos);
