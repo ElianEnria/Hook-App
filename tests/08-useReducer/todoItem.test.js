@@ -18,11 +18,14 @@ describe("Prueba en el TodoItem", () => {
         onDeleteTodo={onDeleteTodoMock}
       />
     );
-    const liElement = screen.getByRole('listitem')
-    expect(liElement.className).toBe("list-group-item d-flex justify-content-between")
+    const liElement = screen.getByRole("listitem");
+    expect(liElement.className).toBe(
+      "list-group-item d-flex justify-content-between"
+    );
 
-    const spanElement = screen.getByLabelText('span')
-    expect(spanElement.className).toContain('align-self-center')
+    const spanElement = screen.getByLabelText("span");
+    expect(spanElement.className).toContain("align-self-center");
+    // expect(spanElement.className).toBe("align-self-center ");
 
     screen.debug();
   });
