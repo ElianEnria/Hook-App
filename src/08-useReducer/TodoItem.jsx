@@ -7,6 +7,7 @@ export const TodoItem = ({ todo, onDeleteTodo, onToggleTodo }) => {
             todo.done ? "text-decoration-line-through" : ""
           }`}
           onDoubleClick={() => onToggleTodo(todo.id)}
+          aria-label="span"
         >
           {todo.description}
         </span>

@@ -12,8 +12,8 @@ export const MultipleCustomHooks = () => {
             <h1> BreakingBad Quotes </h1>
             <hr />
             {   //principio Single Responsibility Principle
-                isLoading // ? si esta en true
-                    ? <LoadingQuotes />
+                isLoading 
+                    ? <LoadingQuotes /> // ? si esta en true
                     : <Quotes author={author} quote={quote}/> // caso contrario
             }
             <button className="btn btn-primary" onClick={() => increment()} disabled={isLoading}>
